@@ -4,21 +4,21 @@ export const topics = createSlice({
   name: "topics",
   initialState: {
     topics: {
-      topics: {
-        '123456': {
-          id: "123456",
-          name: "name of topic",
-          icon: "icon url",
-          quizIds: ["123"]
-        },
-        '7890': {
-          id: "78900",
-          name: "name of topic",
-          icon: "icon url",
-          quizIds: ["789"]
-        }
+      123456: {
+        id: "123456",
+        name: "Topic 1",
+        icon:
+          "https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/book.svg",
+        quizIds: ["123"]
+      },
+      7890: {
+        id: "78900",
+        name: "Topic 2",
+        icon:
+          "https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/clover.svg",
+        quizIds: ["789", "789010"]
       }
-    },
+    }
     // newTopic: {
     //   id: "123456",
     //   name: "name of topic",
@@ -28,7 +28,7 @@ export const topics = createSlice({
   },
   reducers: {
     addTopic: (state, action) => {
-      state.topics.topics[action.payload.id] = action.payload;
+      state.topics[action.payload.id] = action.payload;
     }
   }
 });
