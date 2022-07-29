@@ -16,7 +16,7 @@ export const addQuizToTopic = (payload) => {
   };
 };
 
-export const quizzes = createSlice({
+const quizzes = createSlice({
   name: "quizzes",
   initialState: {
     quizzes: {}
