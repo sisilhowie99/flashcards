@@ -28,6 +28,6 @@ export const quizzes = createSlice({
   }
 });
 
-export const selectQuizzes = (state) => state.quizzes;
+export const selectQuizzes = (state) => state.quizzes.quizzes;
 export const { addQuiz } = quizzes.actions;
 export default quizzes.reducer;
